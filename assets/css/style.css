@@ -1,6 +1,6 @@
 /* -- Variables -- */
 :root {
-  --primary-color: #fff;
+  --primary-color: rgb(185, 182, 182);
   --secondary-color: #000;
   --gradient-top-color: rgba(209, 60, 60, 1);
   --gradient-bottom-color: rgba(253, 144, 45, 1);
@@ -49,7 +49,7 @@ ul {
 body,
 a,
 a:hover {
-  color: #f50928;
+  color: #caf509;
 }
 
 a,
@@ -113,6 +113,14 @@ body.page-template-page-fullsingle-me {
 body.page-template-page-fullsingle-me h1 {
   font-weight: 600;
   font-size: 3rem;
+  color:rgb(255, 17, 0);
+}
+
+p{
+  color:rgb(0, 0, 6);
+  background-color: rgba(248, 248, 255, 30%) ;
+  padding:7px 6px 12px 8px;
+  border-radius:5px;
 }
 
 .fs-me {
