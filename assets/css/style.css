@@ -121,6 +121,7 @@ p{
   background-color: rgba(248, 248, 255, 30%) ;
   padding:7px 6px 12px 8px;
   border-radius:5px;
+  font-size:1.2rem;
 }
 
 .fs-me {
@@ -251,13 +252,13 @@ p{
 }
 
 .network ul li a .svg-icon path {
-  fill: var(--primary-color);
+  fill: var(--secondary-color);
   -webkit-transition: 1s;
   transition: 1s;
 }
 
 .network ul li a:hover .svg-icon path {
-  fill: var(--secondary-color);
+  fill: var(--primary-color);
   -webkit-transition: 0.1s;
   transition: 0.1s;
 }
