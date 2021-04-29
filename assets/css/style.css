@@ -2,8 +2,8 @@
 :root {
   --primary-color: rgb(185, 182, 182);
   --secondary-color: #000;
-  --gradient-top-color: rgba(209, 60, 60, 1);
-  --gradient-bottom-color: rgba(253, 144, 45, 1);
+  --gradient-top-color: rgba(131, 200, 218, 0.384);
+  --gradient-bottom-color: rgba(2, 78, 97, 0.568);
   --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 }
@@ -258,7 +258,7 @@ p{
 }
 
 .network ul li a:hover .svg-icon path {
-  fill: var(--primary-color);
+  fill: var(--gradient-bottom-color);
   -webkit-transition: 0.1s;
   transition: 0.1s;
 }
