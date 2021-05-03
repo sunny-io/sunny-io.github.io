@@ -40,16 +40,15 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   border-style: none;
+  color: var(--secondary-color);  
+
 }
 
-ul {
+ul.navlist {
   list-style: none;
 }
 
-body
- {
-color: var(--secondary-color);  
-}
+
 
 a,
 a:hover {
@@ -71,6 +70,7 @@ header {
   height: auto;
   position: fixed;
   width:100vw;
+  display:flex;
 }
 
 .navicon {
@@ -82,7 +82,7 @@ header {
 }
 
 nav ul li {
-  display: inline-block;
+ 
   margin:0.5em;
 }
 
