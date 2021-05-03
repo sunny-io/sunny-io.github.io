@@ -46,9 +46,10 @@ ul {
   list-style: none;
 }
 
-body
- {
-color: var(--secondary-color);  
+body,
+a,
+a:hover {
+  color: #caf509;
 }
 
 a,
@@ -58,62 +59,11 @@ a:hover {
   border-style: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-  color: #caf509;
 }
 
 img {
   max-width: 100%;
   display: block;
-}
-
-header {
-  background-color: var(--gradient-top-color);
-  height: auto;
-  position: fixed;
-  width:100vw;
-}
-
-.navicon {
-  background-image:url("../../images/menu-rounded-solid.svg");
-  height: 1em;
-  width: 1em;
-  background-repeat: no-repeat;
-  
-}
-
-nav ul li {
-  display: inline-block;
-  margin:0.5em;
-}
-
-.splash {
-  background-image: url("../../images/Katze_Am_Meer.jpg");
-  background-size:  cover;
-  height: 667px;
-  width: 100vw;
-
-  background-repeat:no-repeat;
-  position:relative;
-  top:2.5em;
-}
-
-.network ul{
-  display: inline-block;
-}
-
-footer {
-  background-color:var(--gradient-bottom-color);
-  width:100vw;
-}
-
-footer ul li {
-  display: inline-block;
-  margin:0.5em;
-}
-
-footer ul{
-  
-  right: 0.1em;
 }
 
 /* -- Content -- */
@@ -136,7 +86,35 @@ footer ul{
   }
 }
 
+body.page-template-page-fullsingle-me {
+  height: 100vh;
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: -0.5px;
+  color: var(--primary-color);
+  background: linear-gradient(
+    0deg,
+    var(--gradient-top-color) 0%,
+    var(--gradient-bottom-color) 100%
+  );
 
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 250, 0.219) 100%
+    ),
+    url('../../images/Katze_Am_Meer.jpg');
+
+  background-position: center center;
+  background-size: cover;
+  margin: 0px;
+}
+
+body.page-template-page-fullsingle-me h1 {
+  font-weight: 600;
+  font-size: 3rem;
+  color:rgb(255, 17, 0);
+}
 
 p{
   color:rgb(0, 0, 6);
@@ -229,13 +207,26 @@ p{
   }
 }
 
-.inProgress {
-  color: #fff;
-  font-size: 3em;
+.network {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-animation: fadein 6s;
+  animation: fadein 6s;
+  margin-top: auto;
 }
 
-.network {
-  display: inline-block;
+.network ul {
+  -webkit-animation: fadein 6s;
+  animation: fadein 6s;
+  margin-top: auto;
 }
 
 .network ul li {
