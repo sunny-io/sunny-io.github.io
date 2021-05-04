@@ -4,8 +4,8 @@
   --secondary-color: #000;
   --gradient-top-color: rgba(131, 200, 218, 0.384);
   --gradient-bottom-color: rgba(2, 78, 97, 0.568);
-  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
+    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 /* -- CSS Reset -- */
@@ -34,14 +34,15 @@ p {
   font-family: var(--font);
 }
 
+/*-- Reset end --*/
+
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   border-style: none;
-  color: var(--secondary-color);  
-
+  color: var(--secondary-color);
 }
 
 ul.navlist {
@@ -49,8 +50,6 @@ ul.navlist {
   display: flex;
   flex-direction: row;
 }
-
-
 
 a,
 a:hover {
@@ -71,113 +70,65 @@ header {
   background-color: var(--gradient-top-color);
   height: auto;
   position: fixed;
-  width:100vw;
-  display:flex;
+  width: 100vw;
+  display: flex;
 }
 
 .navicon {
-  background-image:url("../../images/menu-rounded-solid.svg");
+  background-image: url("../../images/menu-rounded-solid.svg");
   height: 1em;
   width: 1em;
   background-repeat: no-repeat;
   margin-top: 0.8em;
-  
 }
 
 nav ul li {
- 
-  margin:0.5em;
+  margin: 0.5em;
 }
 
 .splash {
   background-image: url("../../images/Katze_Am_Meer.jpg");
-  background-size:  cover;
+  background-size: cover;
   height: 667px;
   width: 100vw;
 
-  background-repeat:no-repeat;
-  position:relative;
-  top:2.5em;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 2.5em;
 }
 
-.network ul{
+.network ul {
   display: inline-block;
 }
 
 footer {
-  background-color:var(--gradient-bottom-color);
-  width:100vw;
+  background-color: var(--gradient-bottom-color);
+  width: 100vw;
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
 }
 
 footer ul li {
   display: inline-block;
-  margin:0.5em;
+  margin: 0.5em;
+  padding-top: 5px;
 }
 
-footer ul{
-  
+footer ul {
   right: 0.1em;
 }
 
-/* -- Content -- */
 
-@-webkit-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+p {
+  color: rgb(0, 0, 6);
+  background-color: rgba(248, 248, 255, 30%);
+  padding: 7px 6px 12px 8px;
+  border-radius: 5px;
+  font-size: 1.2rem;
 }
 
 
 
-p{
-  color:rgb(0, 0, 6);
-  background-color: rgba(248, 248, 255, 30%) ;
-  padding:7px 6px 12px 8px;
-  border-radius:5px;
-  font-size:1.2rem;
-}
-
-.fs-me {
-  padding: 10vh 10vw;
-  overflow: hidden;
-  position: absolute;
-  z-index: 1000;
-}
-@media (max-width: 500px) {
-  .fs-me {
-    padding: 5vh 5vw;
-    text-align: center;
-  }
-}
-.fs-me .me-content {
-  height: 80vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-@media (max-width: 500px) {
-  .fs-me .me-content {
-    height: 90vh;
-  }
-}
 
 .logo {
   -webkit-box-flex: 1;
@@ -243,6 +194,11 @@ p{
   display: inline-block;
 }
 
+.network ul {
+  display: flex;
+  align-items: center;
+}
+
 .network ul li {
   display: inline-block;
   margin-right: 8px;
@@ -253,6 +209,10 @@ p{
   width: 30px;
   height: 30px;
   cursor: pointer;
+}
+
+#svg-icon-email {
+  padding-top: 1px;
 }
 
 .network ul li a .svg-icon {
