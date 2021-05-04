@@ -46,6 +46,8 @@ body {
 
 ul.navlist {
   list-style: none;
+  display: flex;
+  flex-direction: row;
 }
 
 
@@ -78,6 +80,7 @@ header {
   height: 1em;
   width: 1em;
   background-repeat: no-repeat;
+  margin-top: 0.8em;
   
 }
 
@@ -104,6 +107,8 @@ nav ul li {
 footer {
   background-color:var(--gradient-bottom-color);
   width:100vw;
+  display: flex;
+  flex-direction: row;
 }
 
 footer ul li {
@@ -267,7 +272,7 @@ p{
 }
 
 .network ul li a:hover .svg-icon path {
-  fill: var(--gradient-bottom-color);
+  fill: rgb(202, 198, 198);
   -webkit-transition: 0.1s;
   transition: 0.1s;
 }
