@@ -86,16 +86,42 @@ nav ul li {
   margin: 0.5em;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .splash {
-  background-image: url("../../images/Katze_Am_Meer.jpg");
+  background-image: url("../../images/cat_on_the_prowl_420px.jpg");
   background-size: cover;
-  height: 667px;
   width: 100vw;
+  height: 280px;
 
   background-repeat: no-repeat;
   position: relative;
   top: 2.5em;
+
 }
+
+
+.splash h1 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color:aliceblue;
+}
+
+.bio,
+.moreBio {
+  margin-top: 1.3rem;
+  font-size: 1rem;
+  padding-left: 0.3rem;
+  padding-right:0.3rem;
+}
+ .bio > p,
+ .moreBio > p{
+   font-size:1rem;
+ }
 
 .network ul {
   display: inline-block;
