@@ -1,3 +1,5 @@
+/*Looking for a job as technical writer, UX-writer or interaction designer */
+
 /* -- Variables -- */
 :root {
   --primary-color: rgb(185, 182, 182);
@@ -36,6 +38,9 @@ p {
 
 /*-- Reset end --*/
 
+
+/*basic settings*/
+
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
@@ -44,6 +49,75 @@ body {
   border-style: none;
   color: var(--secondary-color);
 }
+
+p {
+  color: rgb(0, 0, 6);
+  background-color: rgba(248, 248, 255, 30%);
+  padding: 7px 6px 12px 8px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 200;
+  letter-spacing: 0.2em;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/*Header and navigation*/
+
+header {
+  background-color: var(--gradient-top-color);
+  height: auto;
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  top: 0px;
+}
+/* logo etc*/
+
+.logo {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-item-align: left;
+  align-self: left;
+  -webkit-animation: fadein 2s;
+  animation: fadein 2s;
+}
+
+
+/*navigation*/
+.navicon {
+  background-image: url("../../images/menu-rounded-solid.svg");
+  height: 1em;
+  width: 1em;
+  background-repeat: no-repeat;
+  margin-top: 0.8em;
+}
+
+nav ul li {
+  margin: 0.5em;
+}
+
 
 ul.navlist {
   list-style: none;
@@ -65,74 +139,9 @@ img {
   max-width: 100%;
   display: block;
 }
+/*end navigation*/
 
-header {
-  background-color: var(--gradient-top-color);
-  height: auto;
-  position: fixed;
-  width: 100vw;
-  display: flex;
-  top: 0px;
-}
-
-.navicon {
-  background-image: url("../../images/menu-rounded-solid.svg");
-  height: 1em;
-  width: 1em;
-  background-repeat: no-repeat;
-  margin-top: 0.8em;
-}
-
-nav ul li {
-  margin: 0.5em;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.splash {
-  background-image: url("../../images/cat_on_the_prowl_420px.jpg");
-  background-size: cover;
-  width: 100vw;
-  height: 280px;
-
-  background-repeat: no-repeat;
-  position: relative;
-  top: 2.5em;
-
-}
-
-
-.splash h1 {
-  font-size: 1.7rem;
-  font-weight: 600;
-  color:aliceblue;
-}
-
-.bio,
-.moreBio {
-  margin-top: 1.3rem;
-  font-size: 1rem;
-  padding-left: 0.3rem;
-  padding-right:0.3rem;
-}
- .bio > p,
- .moreBio > p{
-   font-size:1rem;
- }
-
- 
- .projectList {
-  margin-top: 4rem;
- }
-
-.network ul {
-  display: inline-block;
-}
-
+/* footer and footer-nav*/ 
 footer {
   background-color: var(--gradient-bottom-color);
   width: 100vw;
@@ -146,23 +155,76 @@ footer ul li {
   padding-top: 5px;
 }
 
+.network ul {
+  display: inline-block;
+}
 footer ul {
   right: 0.1em;
 }
 
+/* end footer */
 
-p {
-  color: rgb(0, 0, 6);
-  background-color: rgba(248, 248, 255, 30%);
-  padding: 7px 6px 12px 8px;
-  border-radius: 5px;
-  font-size: 1.2rem;
+
+/*start content*/
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/*Styles for extendable content*/
+/*home page splash */
+.splash {
+  background-image: url("../../images/cat_on_the_prowl_420px.jpg");
+  background-size: cover;
+  width: 100vw;
+  height: 280px;
+
+  background-repeat: no-repeat;
+  position: relative;
+  top: 2.5em;
+
+}
+
+.splash h1 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color:aliceblue;
+}
+/*end splash*/
+
+
+/*normal content*/
+
+.bio,
+.moreBio,
+.projectList {
+  margin-top: 1.3rem;
+  font-size: 1rem;
+  padding-left: 0.3rem;
+  padding-right:0.3rem;
+}
+
+ .bio > p,
+ .moreBio > p,
+ .projectList p{
+   font-size:1rem;
+ }
+
+ 
+ .projectList {
+  margin-top: 4rem;
+ }
+/*end normal content 
+
+/*Styles for extendable content => experimental*/
 
 input[type='checkbox'] {
   display: none;
+}
+
+label > h2{
+  display: inline-block;
 }
 
 .lbl-toggle{
@@ -207,24 +269,7 @@ input[type='checkbox'] {
   border-bottom-left-radius: 0;
 }
 
-/* logo etc*/
-
-.logo {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-item-align: left;
-  align-self: left;
-  -webkit-animation: fadein 2s;
-  animation: fadein 2s;
-}
+/* media queries for larger screens*/
 
 @media (max-width: 500px) {
   .logo {
@@ -269,6 +314,8 @@ input[type='checkbox'] {
   font-size: 3em;
 }
 
+
+/*footer on laptop*/
 .network {
   display: inline-block;
 }
