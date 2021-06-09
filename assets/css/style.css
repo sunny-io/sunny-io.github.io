@@ -219,9 +219,15 @@ footer ul {
 
 /*Styles for extendable content => experimental*/
 
+.collapsible-wrapper{
+  padding-top: 0.5rem;
+}
+
 input[type='checkbox'] {
   display: none;
 }
+
+
 
 label > h2{
   display: inline-block;
@@ -254,6 +260,17 @@ label > h2{
   overflow: hidden;
 
   transition: max-height .25s ease-in-out;
+  
+}
+
+.collapsible-content ul,
+.collapsible-content h3{
+  padding-left: 0.3rem;
+  padding-right:0.3rem;
+}
+
+.collapsible-content ul{
+  margin-bottom: 0.7rem;
 }
 
 .toggle:checked + .lbl-toggle + .collapsible-content {
