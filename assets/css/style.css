@@ -10,7 +10,9 @@
     Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   
 }
-
+html {
+  font-size: 12px;
+}
 /* -- CSS Reset -- */
 * {
   text-rendering: optimizeLegibility;
@@ -275,8 +277,8 @@ footer ul {
 .projectList {
   margin-top: 1.3rem;
   font-size: 1rem;
-  padding-left: 0.3rem;
-  padding-right:0.3rem;
+  margin-left: 3vw;
+  margin-right: 3vw;
 }
 
  .bio > p,
@@ -361,42 +363,29 @@ label > h2{
 }
 
 /* media queries for larger screens*/
-
-@media (max-width: 500px) {
-  .logo {
-    -ms-flex-item-align: center;
-    -ms-grid-row-align: center;
-    align-self: center;
-  }
-}
-
-.logo img {
-  max-width: 165px;
-  height: auto;
-}
-
-.bio {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-animation: fadein 4s;
-  animation: fadein 4s;
-  max-width: 66%;
-}
-
-@media (min-width:800px){
-  :root{
+@media (min-width:767px){
+  html{
     font-size: 16px;
+  }
+  h1 {
+  font-size: 2rem;
+}
+h2{
+font-size: 1.6rem;
+
+}
+.bio,
+.moreBio,
+.projectList {
+  margin-top: 3rem;
+  font-size: 1rem;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+@media (min-width:1200px){
+  html {
+    font-size: 20px;
   }
 h1 {
   font-size: 2rem;
@@ -410,7 +399,7 @@ font-size: 1.6rem;
 }
 
 nav a {
-  font-size:1.4rem;
+  font-size:1.2rem;
   padding: 1rem;
 }
 
@@ -444,20 +433,6 @@ a:hover {
 .bio > p, .moreBio > p, .projectList p{
   font-size: 1.2rem;
 }
-}
-
-@media (max-width: 800px) {
-  .bio {
-    max-width: none;
-  }
-}
-
-.inProgress {
-  color: #fff;
-  font-size: 3em;
-}
-
-
 /*footer on laptop*/
 .network {
   display: inline-block;
@@ -505,3 +480,54 @@ a:hover {
   -webkit-transition: 0.1s;
   transition: 0.1s;
 }
+
+
+}
+
+@media (max-width: 800px) {
+  .bio {
+    max-width: none;
+  }
+}
+
+.inProgress {
+  color: #fff;
+  font-size: 3em;
+}
+
+
+
+/* old responsive media queries
+@media (max-width: 500px) {
+  .logo {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+  }
+}
+
+.logo img {
+  max-width: 165px;
+  height: auto;
+}
+
+.bio {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-animation: fadein 4s;
+  animation: fadein 4s;
+  max-width: 66%;
+}
+
+*/
