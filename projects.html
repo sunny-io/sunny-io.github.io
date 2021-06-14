@@ -32,9 +32,11 @@
       <div class="logo"></div>
 
       <nav class="navmenu">
-        <div class="navicon">&nbsp;</div>
-
-        <ul class="navlist">
+        <input id="navi" class="toggle-nav" type="checkbox">
+        <label for="navi" class="lbl-toggle-nav">
+          <div class="navicon">&nbsp;</div>
+        </label>  
+        <ul class="navlist nav-content">
           <li class="current">Home</li>
           <li>
             <a href="#">Projects</a>
@@ -51,19 +53,33 @@
         
           <input id="collapsible02" class="toggle" type="checkbox">
           <label for="collapsible02" class="lbl-toggle">
-          <h2>Cowork2Go App Concept</h2>
-              <p> Cowork2go allows app users to find and book a coworking space at any of the coworking providers in the service. The backend allows companies to configure the app for use of their employees, providing billing credentials for space payment</p>
-          
+          <h2 class="flex">Cowork2Go App Concept</h2>
+            <div class="flex">
+               <picture>
+                 <source media="(min-width:650px)" srcset="images/Co2go_searchScreen.png">
+                 <img src="images/Co2go_searchScreen150px.png" alt="Flowers" style="width:auto;">
+                </picture>  
+                 <p> Cowork2go allows app users to find and book a coworking space at any of the coworking providers in the service. The backend allows companies to configure the app for use of their employees, providing billing credentials for space payment.</p>
+             
+            </div>
             </label>
     
         <div class="collapsible-content">
           <h3>Original Teamwork Project</h3>
+          <div class="flex cloumn">
+                
             <p>
                 CoWork2Go started out as the final project of my UX/UI-Design-Training.
                 Our team, consisting of Herbert Sonnenschein, Ulyana Fidan and me,
                 worked an idea how to make Coworking easier for people who didn't use it
                 often or were traveling a lot.
             </p>
+             <picture>
+                  <source media="(min-width:1200px)" srcset="images/Interviewergebnisse.png">
+                
+                 <source media="(min-width:650px)" srcset="images/Interviewergebnisse800px.png">
+                 <img src="images/Interviewergebnisse300px.png" alt="interview results" style="width:auto;">
+                </picture>
             <p>
                 Starting out with interviews, we identified user needs, e.g. "be sure
                 there is a space open when I get there" and designed an App in Adobe XD,
@@ -76,12 +92,21 @@
               </a>.
             </p>
             <h3>App-Abstract</h3>
+            <div class="flex">
+              <picture>
+                  <source media="(min-width:1200px)" srcset="images/paper-prototype.jpg">
+                
+                 <source media="(min-width:650px)" srcset="images/paper-prototype800px.jpg">
+                 <img src="images/paper-prototype150px.jpg" alt="paper prototype" style="width:auto;">
+                </picture>
+
               <ul class="abstract">
                 <li>Target Group: Individual End Users</li>
                 <li>Platform: Mobile Phone</li>
                 <li>Main Task: Booking a desk at at Coworking space</li>
               </ul>
-
+              </div>
+              </div>
           </div>   
           </div>
   <div class="collapsible-wrapper">

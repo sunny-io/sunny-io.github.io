@@ -4,8 +4,8 @@
 :root {
   --primary-color: rgb(185, 182, 182);
   --secondary-color: #000;
-  --gradient-top-color: rgba(131, 200, 218, 0.384);
-  --gradient-bottom-color: rgba(2, 78, 97, 0.568);
+  --gradient-top-color: rgb(131, 200, 218);
+  --gradient-bottom-color: rgb(2, 78, 97);
   --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
     Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
@@ -75,6 +75,22 @@ h4 {
   font-weight: 500;
 }
 
+/* flex-versuche
+
+.flex {
+  display: flex;
+
+}
+
+picture{
+  flex-shrink: 0;
+}
+
+.flex.column {
+  flex-direction: column;
+}
+*/
+
 /*Header and navigation*/
 
 header {
@@ -84,6 +100,7 @@ header {
   width: 100vw;
   display: flex;
   top: 0px;
+
 }
 /* logo etc*/
 
@@ -106,6 +123,7 @@ header {
 
 
 /*navigation*/
+/*remove for label usage
 .navicon {
   background-image: url("../../images/menu-rounded-solid.svg");
   height: 1em;
@@ -113,16 +131,61 @@ header {
   background-repeat: no-repeat;
   margin-top: 0.8em;
 }
-
+*/
 nav ul li {
   margin: 0.5em;
+  
 }
 
 
 ul.navlist {
   list-style: none;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  height: 100vw;
+  background-color: var(--gradient-top-color);
+  width: 100vw;
+  right:0px;
+  
+}
+
+
+.lbl-toggle-nav{
+  display: block;
+  height: 3rem;
+}
+.lbl-toggle-nav:hover {
+  color: #7C5A0B;
+}
+
+.lbl-toggle-nav::before {
+  content: ' ';
+  display: inline-block;
+  background-image: url("../../images/menu-rounded-solid.svg");
+  height: 1em;
+  width: 1em;
+  background-repeat: no-repeat;
+  margin-top: 0.8em;
+
+
+  transition: transform .2s ease-out;
+}
+
+.toggle-nav:checked + .lbl-toggle-nav::before {
+ background-image: url("../../images/close.svg");
+}
+
+.toggle:checked + ul.navlist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vw;
+  background-color: var(--gradient-top-color);
+  width: 100vw;
+  right:0px;
+  
 }
 
 a,
@@ -132,7 +195,7 @@ a:hover {
   border-style: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-  color: #caf509;
+  
 }
 
 img {
@@ -318,6 +381,30 @@ label > h2{
   -webkit-animation: fadein 4s;
   animation: fadein 4s;
   max-width: 66%;
+}
+
+@media (min-width:800px){
+
+nav ul li {
+  margin: 0.5em;
+}
+
+
+ul.navlist {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  border: none;
+  border-style: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color:var(--gradient-bottom-color);
+}
 }
 
 @media (max-width: 800px) {
