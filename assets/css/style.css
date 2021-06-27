@@ -10,6 +10,7 @@
   --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
     Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   --main-content-left-right-margins: 5vw;
+  --splash-height:280px;
 }
 html {
   font-size: 12px;
@@ -88,21 +89,6 @@ h4 {
   margin-top: 0.5rem;
 }
 
-/* flex-versuche
-
-.flex {
-  display: flex;
-
-}
-
-picture{
-  flex-shrink: 0;
-}
-
-.flex.column {
-  flex-direction: column;
-}
-*/
 
 /*Header and navigation*/
 
@@ -113,6 +99,7 @@ header {
   width: 100vw;
   display: flex;
   top: 0px;
+  z-index: 999;
 }
 /* logo etc*/
 
@@ -133,16 +120,7 @@ header {
   animation: fadein 2s;
 }
 
-/*navigation*/
-/*remove for label usage
-.navicon {
-  background-image: url("../../images/menu-rounded-solid.svg");
-  height: 1em;
-  width: 1em;
-  background-repeat: no-repeat;
-  margin-top: 0.8em;
-}
-*/
+
 nav ul li {
   margin: 0.5em;
 }
@@ -305,17 +283,21 @@ footer ul {
   background-image: url("../../images/cat_on_the_prowl_420px.jpg");
   background-size: cover;
   width: 100vw;
-  height: 280px;
+  height: var(--splash-height);
 
   background-repeat: no-repeat;
   position: relative;
-  top: 2.5em;
+ 
 }
 
 .splash h1 {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: aliceblue;
+  border-bottom: none;
+  position: relative;
+  top:calc(var(--splash-height) - 2rem);
+  left:var(--main-content-left-right-margins);
 }
 /*end splash*/
 
@@ -338,6 +320,33 @@ footer ul {
 
 .projectList {
   margin-top: 4rem;
+}
+
+.coolButton{
+  
+	width: 80vw;
+	margin-left: var(--main-content-left-right-margins);
+	height: 4rem;
+	background-color:var(--gradient-bottom-color);
+  color:var(--contrast-gradient-bottom-color);
+	margin-bottom: 1rem;
+	border-radius: 10px;
+	font-size: 1.4rem;
+  border:none;
+
+}
+
+.coolButton a{
+  color:var(--contrast-gradient-bottom-color);
+ 
+}
+
+.coolButton a:hover{
+  color:var(--gradient-top-color);
+}
+
+.coolButton a:visited{
+  color:var(--contrast-gradient-bottom-color);
 }
 /*end normal content 
 
@@ -409,12 +418,18 @@ label > h2 {
 
 /* media queries for larger screens*/
 @media (min-width: 767px) {
+:root{
+    --main-content-left-right-margins:5vw;
+  }
+
   html {
     font-size: 16px;
   }
+
   h1 {
     font-size: 2rem;
   }
+
   h2 {
     font-size: 1.6rem;
   }
@@ -434,8 +449,8 @@ label > h2 {
   .projectList {
    
     font-size: 1rem;
-    margin-left: 5vw;
-    margin-right: 5vw;
+    margin-left: var(--main-content-left-right-margins);
+    margin-right: var(--main-content-left-right-margins);
   }
 }
 
@@ -444,6 +459,7 @@ label > h2 {
   :root{
     --main-content-left-right-margins:10vw;
   }
+
   html {
     font-size: 20px;
   }
@@ -460,6 +476,10 @@ label > h2 {
   header {
     padding-right: var(--main-content-left-right-margins);
   }
+
+li.mobileonly {
+  display:none;
+}
 
   .navmenu {
     height: 5rem;
@@ -509,8 +529,8 @@ label > h2 {
   .projectList {
    
     font-size: 1.4rem;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-left: var(--main-content-left-right-margins);
+    margin-right: var(--main-content-left-right-margins);
   }
 
   .bio > p,
@@ -558,51 +578,4 @@ label > h2 {
 
 }
 
-/*
-@media (max-width: 800px) {
-  .bio {
-    max-width: none;
-  }
-}
 
-.inProgress {
-  color: #fff;
-  font-size: 3em;
-}
-
-*/
-
-/* old responsive media queries
-@media (max-width: 500px) {
-  .logo {
-    -ms-flex-item-align: center;
-    -ms-grid-row-align: center;
-    align-self: center;
-  }
-}
-
-.logo img {
-  max-width: 165px;
-  height: auto;
-}
-
-.bio {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-animation: fadein 4s;
-  animation: fadein 4s;
-  max-width: 66%;
-}
-
-*/
