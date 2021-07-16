@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- SEO -->
     <title>sunny-io Projects</title>
     <meta
@@ -28,7 +28,7 @@
 
   <body>
     <!--Header and Navigation-->
- <header>
+    <header>
       <div class="logo"></div>
 
       <nav class="navmenu">
@@ -41,32 +41,102 @@
           <li>
             <a class="current" href="projects.html">Projects</a>
           </li>
-          <li class="mobileonly"><a  href="imprint.html">Imprint</a></li>
-         
+          <li class="mobileonly"><a href="imprint.html">Imprint</a></li>
         </ul>
       </nav>
     </header>
-   
+
     <div class="projectList">
       <div class="collapsible-wrapper">
         <input id="collapsible02" class="toggle" type="checkbox" />
         <label for="collapsible02" class="lbl-toggle">
-          <h2 class="flex">Cowork2Go App Concept</h2>
+          <h2 id="CoWork" class="flex">Cowork2Go App Concept</h2>
           <div class="flex">
-            <picture>
-              <source media="(min-width:650px)" srcset="images/co2go.png" />
-              <img
-                src="images/co2go_300px"
-                alt="Cowork2go Logo"
-                style="width: auto"
-              />
-            </picture>
+            <div class="image_slider">
+             
+              <ul class="slider">
+                <li>
+                  <a href="#img1" id="img1_thumb">
+                    <picture class="slide">
+                      <source
+                        media="(min-width:650px)"
+                        srcset="images/co2go.png"
+                      />
+                      <img src="images/co2go_300px.png" alt="Cowork2go Logo" />
+                    </picture>
+                  </a>
+
+                  <a href="#" class="lightbox" id="img1">
+                    <span
+                      style="background-image: url('./images/co2go.png')"
+                    ></span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#img2" id="img2_thumb">
+                    <picture class="slide"> 
+                      <source
+                        media="(min-width:650px)"
+                        srcset="images/Interviewergebnisse800px.png"
+                      />
+                      <img
+                        src="images/Interviewergebnisse300px.png"
+                        alt="Interview Results"
+                      />
+                    </picture>
+                  </a>
+                  <a href="#_" class="lightbox" id="img2">
+                    <span style="background-image: url('./images/Interviewergebnisse.png');"></span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#img3" id="img3_thumb">
+                    <picture class="slide">
+                      <source
+                        media="(min-width:650px)"
+                        srcset="images/paper-prototype800px.jpg"
+                      />
+                      <img
+                        src="images/paper-prototype150px.jpg"
+                        alt="Paper Prototype"
+                      />
+                    </picture>
+                  </a>
+                  <a href="#_" class="lightbox" id="img3">
+                    <span
+                      style="
+                        background-image: url('./images/paper-prototype.jpg')";
+                      "
+                    ></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#img4" id="img4_thumb">
+                    <picture class="screenshot">
+                      <source
+                        media="(min-width:650px)"
+                        srcset="images/Co2go_searchScreen.png"
+                      />
+                      <img
+                        src="images/Co2go_searchScreen150px.png"
+                        alt="Search Screen Co2Go XD-Prototype"
+                      />
+                    </picture>
+                  </a>
+                  <a href="#img4_thumb" class="lightbox" id="img4">
+                    <span
+                      style="
+                        background-image: url('./images/Co2go_searchScreen.png')";
+                      "
+                    ></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
             <p>
-              Cowork2go allows app users to find and book a coworking space
-              (desk, room or meeting room) at any of the coworking providers in
-              the service. The backend allows companies to configure the app for
-              use by their employees, providing billing credentials to company
-              accounts.
+             Cowork2go allows app users to find and book a coworking space (desk, room or meeting room) at any of the coworking providers in the service. 
             </p>
           </div>
         </label>
@@ -75,51 +145,11 @@
           <h3>Original Teamwork Project</h3>
           <div class="flex cloumn">
             <p>
-              CoWork2Go started out as the final project of my
-              UX/UI-Design-Training. Our team, consisting of Herbert
-              Sonnenschein, Ulyana Fidan and me, worked an idea how to make
-              Coworking easier for people who didn't use it often or were
-              traveling a lot.
+              CoWork2Go was the final project of my UX/UI-Design-Training. Our team, consisting of Herbert Sonnenschein, Ulyana Fidan and me, developed an app concept to make Coworking easier for people who didn't use every day or were traveling a lot. 
             </p>
-            <picture>
-              <source
-                media="(min-width:1200px)"
-                srcset="images/Interviewergebnisse.png"
-              />
-
-              <source
-                media="(min-width:650px)"
-                srcset="images/Interviewergebnisse800px.png"
-              />
-              <img
-                src="images/Interviewergebnisse300px.png"
-                alt="interview results"
-                style="width: auto"
-              />
-            </picture>
             <p>
-              Starting out with interviews, we identified user needs, e.g. "be
-              sure there is a space open when I get there" and, did some
-              paper-prototyping and testing. With the first test results, we
-              designed an app in Adobe XD, first as wireframe, later as actual
-              prototype.
+            Starting out with interviews, we identified user needs, e.g. "be sure there is a space open when I get there". We did some paper-prototyping and testing. With the first test results, we designed an app in Adobe XD, first as wireframe, later as actual prototype. 
             </p>
-            <picture>
-              <source
-                media="(min-width:1200px)"
-                srcset="images/paper-prototype.jpg"
-              />
-
-              <source
-                media="(min-width:650px)"
-                srcset="images/paper-prototype800px.jpg"
-              />
-              <img
-                src="images/paper-prototype150px.jpg"
-                alt="paper prototype"
-                style="width: auto"
-              />
-            </picture>
 
             <p>
               Result of the work as a team was a presentation (in German) and a
@@ -134,8 +164,18 @@
 
             <ul class="abstract">
               <li>Target Group: Individual End Users</li>
-              <li>Platform: Mobile Phone</li>
+              <li>Primary plattform: Mobile Phone</li>
               <li>Main Task: Booking a desk at at Coworking space</li>
+             
+            </ul>
+            <h3>Methods</h3>
+            <ul>
+              <li>Prospective user interviews</li>
+             <li>User tests with Paper Prototypes</li> 
+             <li>Personas</li>  
+             <li>User Szenarios</li>  
+             <li> Mood Board</li>  
+             <li>XD-Prototype </li>
             </ul>
           </div>
         </div>
@@ -143,64 +183,156 @@
       <div class="collapsible-wrapper">
         <input id="collapsible03" class="toggle" type="checkbox" />
         <label for="collapsible03" class="lbl-toggle">
-          <h2>Documentation in MadCap Flare</h2>
+          <h2 id="madcap">MadCap Flare - Cowork2Go Online help and manual</h2>
+              <div class="image_slider">
+      <ul class="slider">
+        <li>
+          <a href="#img11" id="img11_thumb">
+            <picture class="slide">
+              <source
+                media="(min-width:650px)"
+                srcset="images/Standalone-Title-h540px.png"
+              />
+              <img
+                src="images/Standalone-Title-h320px.png"
+                alt="Cowork2go Manual Title"
+              />
+            </picture>
+          </a>
+
+         <a href="#" class="lightbox" id="img11">
+            <span
+              style="background-image: url('./images/Standalone-Title.png')"
+            >
+            </span>
+            <p class="caption">PDF Manual Standalone App</p>
+          </a>
+        </li>
+
+        <li>
+          <a href="#img12" id="img12_thumb">
+            <picture class="slide">
+              <source
+                media="(min-width:650px)"
+                srcset="images/Standalone-Glossary_Index_h540px.png"
+              />
+              <img
+                src="images/Standalone-Glossary_Index_h320px.png"
+                alt="Index and Glossary in PDF Manual"
+              />
+            </picture>
+          </a>
+          <a href="#img12_thumb" class="lightbox" id="img12">
+            <span
+              style="
+                background-image: url('./images/Standalone-Index-Glossary.png');
+              "
+            ></span>
+            <p class="caption">Index and Glossary in PDF Manual</p>
+          </a>
+        </li>
+
+        <li>
+          <a href="#img13" id="img13_thumb">
+            <picture class="screenshot">
+              <source
+                media="(min-width:650px)"
+                srcset="images/Standalone-online-help-getting-started-h540.png"
+              />
+              <img
+                src="images/Standalone-online-help-getting-started-h320px.png"
+                alt="Online-Help mobile Standalone app"
+              />
+            </picture>
+          </a>
+          <a href="#img13thumb" class="lightbox" id="img13">
+            <span
+              style="
+                background-image: url('images/Standalone-online-help-getting-started.png');
+              "
+            >
+            </span>
+            <p class="caption">Online-help for Standalone App</p>
+          </a>
+        </li>
+        <li>
+          <a href="#img14" id="img14_thumb">
+            <picture class="slide">
+              <source
+                media="(min-width:650px)"
+                srcset="images/Company-online-help-users-h540px.png"
+              />
+              <img
+                src="images/Company-online-help-users-h320px.png"
+                alt="Online-Help Company Version desktop"
+              />
+            </picture>
+          </a>
+          <a href="#img14_thumb" class="lightbox" id="img14">
+            <span
+              style="
+                background-image: url('./images/Company-online-help-users.png');
+              "
+            >
+            </span>
+            <p class="caption">Online-Help Company Version on desktop</p>
+          </a>
+        </li>
+      </ul>
+    </div>
           <p>
-            As a project to try out what I learned from the Madcap training videos, I choose the CoWork2Go App and added some ideas about a Company backend, to have
-            content for two different versions: The stand-alone app and Company
-            CoWork2Go, which included the backend functions. For both, I created
-            an online-help and a PDF, using different CI-Colors.
+            As doing actual demo projects is a good way to see how much you really learned about a tool, I used the CoWork2Go project as a test project for MadCap Flare. Cool tool, I like it a lot. 
           </p>
         </label>
-
+        <p>The demo licence ran out before I finished the project, so there's some Lorem Ipsum still in there.</p>
         <div class="collapsible-content">
-          <h3>Backend Abstract</h3>
-          <ul class="abstract">
-            <li>Target Group: Company employeed, Admins or Project Leads</li>
-            <li>Platform: Laptop/Desktop</li>
-            <li>
-              Main Task: Setting up access for users to company billing of
-              CoWork2Go bookings
-            </li>
-          </ul>
-          <h3>Documentation</h3>
-          <p>
-           The test licence expired before I could do it all. There's some Lorem Ipsum and a handful of styling issues in the PDF output still open.  As I was still working on the CSS the moment the licence ran out, the unscambled output a friend of a friend did on a licenced system has some issues with the glossary and index. 
-          </p>
-          <p>
-           Here's the unscrabled PDF
-            <a href="/assets/CoWork2Go/Cowork2Go.pdf" target="_blank"
-              >End-User App
-            </a>
-            and the
-            <a href="/assets/CoWork2Go/CompanyCowork2Go.pdf" target="_blank"
-              >Company version</a
-              >.
-              Index and glossary where supposed to look like this (without the scrambled spelling)
-          </p>
-
           <h3>Documentation Abstract</h3>
           <ul class="abstract">
             <li>Single Source: Four Outputs from one source</li>
+            <li>Two Designs: Standalone App and Company Version</li>
             <li>
-              Two Designs: Standalone App and Company Version including Backend
+             PDF: Designed as Print version with left/right pages, Glossary and Index 
             </li>
-            <li>
-              PDF: Designed as Print version with left/right pages, Glossary and
-              Index
-            </li>
-            <li>
-              HTML-Help: Standalone App help optimized for Mobile Use, Company
-              Version for Desktop use
-            </li>
-          </ul>
+            <li>HTML-Help: Standalone</li>
+          </ul>        
         </div>
       </div>
+
+      <div class="collapsible-wrapper">
+        <input id="collapsible03" class="toggle" type="checkbox" />
+        <label for="collapsible03" class="lbl-toggle">
+          <h2 id="WIP1">WIP: Semi-Regular Meetings – Group Coordination</h2>
+          <p>
+            Did you ever try to plan meetings for a group that meets weekly in theory, but you need at least six persons to actually show up for the meeting making any sense? And you use doodle, or, if you are German, nuudel, and are annoyed with how complicated in is to enter meetings for the next three months? <span>More...</span>
+          </p>
+        </label>
+        <p>This project is in the research state, a German preliminary survey can be found here: <a class="normal" href=" https://forms.gle/oy1hBt4VbpZ3ERFA9"> https://forms.gle/oy1hBt4VbpZ3ERFA9 </a>(If you follow this link, it goes to google forms. Google’s Privacy Policy applies.</p>
+        <div class="collapsible-content">
+          <h3>Project Abstract</h3>
+          <ul class="abstract">
+            <li>Target audience: Organizers and participants of groups that meet semi- regulary, in work or recreational contexts </li>
+            <li>Target plattform: tbd - most likely mobile</li>
+            <li>Status: Preliminary Research 
+          </ul>         
+        </div>
+      </div>
+       <h2 id="Coding">Coding projects</h2>
+          <p>
+            This website is done in HTML and CSS only.<br>
+            Other projects can be found on my GitHub:
+          </p>
+          <ul>
+            <li>
+              <a href="">Berlin Weather for Outside Dancers</a></li>
+              <li><a href="https://github.com/sunny-io/AO3-skins ">CSS-Skins for ArchiveOfOurOwn </a></li>
+             
+            </ul>
     </div>
 
     <footer>
       <ul class="footer-navi">
-        <li> <a href="imprint.html">Imprint</a></li>
-        <li> <a href="imprint.html#h-privacy-policy">Privacy Policy</a></li>
+        <li><a href="imprint.html">Imprint</a></li>
+        <li><a href="imprint.html#h-privacy-policy">Privacy Policy</a></li>
       </ul>
       <div class="network">
         <ul>
@@ -231,6 +363,6 @@
           </li>
         </ul>
       </div>
-    </footer>  
+    </footer>
   </body>
 </html>

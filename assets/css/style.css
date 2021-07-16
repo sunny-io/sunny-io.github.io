@@ -7,13 +7,96 @@
   --gradient-top-color: rgb(131, 200, 218);
   --gradient-bottom-color: rgb(2, 78, 97);
   --contrast-gradient-bottom-color: rgb(191, 191, 191);
-  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
+  --font: Junction, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
     Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   --main-content-left-right-margins: 5vw;
   --splash-height:280px;
 }
+
+ /*locally hosted Webfonts */
+ /* 
+ ## Ajar-Sans: Source: https://fontlibrary.org/en/font/ajar-sans
+ ##Licence: http://www.apache.org/licenses/LICENSE-2.0 
+ */
+@font-face {
+	font-family: 'Ajar Sans';
+	font-weight: 700;
+	font-style: normal;
+	src: local('Ajar Sans Bold'), local('../../fonts/AjarSans-Bold'),
+	     url('../../fonts/AjarSans-Bold.woff') format('woff'),
+	     url('../../fonts/AjarSans-Bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Ajar Sans Extrabold';
+	font-weight: 800;
+	font-style: normal;
+	src: local('Ajar Sans Extrabold'), local('../../fonts/AjarSans-Extrabold'),
+	     url('../../fonts/AjarSans-Extrabold.woff') format('woff'),
+	     url('../../fonts/AjarSans-Extrabold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Ajar Sans Light';
+	font-weight: 300;
+	font-style: normal;
+	src: local('Ajar Sans Light'), local('../../fonts/AjarSans-Light'),
+	     url('../../fonts/AjarSans-Light.woff') format('woff'),
+	     url('../../fonts/AjarSans-Light.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Ajar Sans';
+	font-weight: 400;
+	font-style: normal;
+	src: local('Ajar Sans'), local('../../fonts/AjarSans-Regular'),
+	     url('../../fonts/AjarSans-Regular.woff') format('woff'),
+	     url('../../fonts/AjarSans-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Ajar Sans Semibold';
+	font-weight: 600;
+	font-style: normal;
+	src: local('Ajar Sans Semibold'), local('fonts/AjarSans-Semibold'),
+	     url('../../fonts/AjarSans-Semibold.ttf') format('woff'),
+	     url('../../fonts/AjarSans-Semibold.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'Junction Bold';
+    src: url('../../fonts/junction-bold.woff') format('woff'),
+         url('../../fonts/junction-bold.ttf') format('truetype');
+
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Junction Light';
+    src: url('../../fonts/junction-light.woff') format('woff'),
+         url('../../fonts/junction-light.ttf') format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Junction';
+    src: url('../../fonts/junction-regular.woff') format('woff'),
+         url('../../fonts/junction-regular.ttf') format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+
+}
+/* End locally hosted webfonts*/
+
+
+
+
 html {
   font-size: 12px;
+  font-family: 'Junction';
 }
 /* -- CSS Reset -- */
 * {
@@ -43,7 +126,7 @@ p {
 
 /*-- Reset end --*/
 
-/*basic settings*/
+/*basic styles*/
 
 body {
   min-height: 100vh;
@@ -52,6 +135,7 @@ body {
   line-height: 1.5;
   border-style: none;
   color: var(--secondary-color);
+   font-family: 'Junction';
 }
 
 p {
@@ -66,27 +150,40 @@ h1 {
   font-size: 1.5rem;
   font-weight: 400;
   margin-bottom: 1rem;
+  font-family: 'Ajar Sans Semibold';
+
   border-bottom: dotted 0.1rem var(--gradient-bottom-color);
 }
 
+
+
 h2 {
   font-size: 1.2rem;
-  text-transform: uppercase;
   font-weight: 200;
   letter-spacing: 0.2em;
   margin-top: 0.5rem;
+  font-family: 'Ajar Sans Semibold';
+  color:var(--gradient-bottom-color);
 }
 
 h3 {
   font-size: 1.2rem;
   font-weight: 200;
   margin-top: 0.5rem;
+  font-family: 'Ajar Sans Semibold';
 }
 
 h4 {
   font-size: 1rem;
   font-weight: 500;
   margin-top: 0.5rem;
+  font-family: 'Ajar Sans Light';
+}
+
+ul {
+  padding-left: 1rem;
+  list-style: inside;
+  margin-top: -0.5rem;
 }
 
 
@@ -291,13 +388,14 @@ footer ul {
 }
 
 .splash h1 {
-  font-size: 1.5rem;
-  font-weight: 600;
   color: aliceblue;
   border-bottom: none;
   position: relative;
   top:calc(var(--splash-height) - 2rem);
   left:var(--main-content-left-right-margins);
+  font-family: 'Ajar Sans Semibold';
+  font-size: 1.5rem;
+  text-shadow: 1px 1px darkblue ;
 }
 /*end splash*/
 
@@ -350,6 +448,59 @@ footer ul {
 }
 /*end normal content 
 
+/* styles for html lightbox by gregory scheer on codepen adapted for use in slider*/
+.lightbox {
+  /* Default to hidden - is later overwritten by .slider a {display:flex}  */
+  display: none;
+
+  /* Overlay entire screen */
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  /* A bit of padding around image */
+  padding: 1em;
+
+  /* Translucent background */
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Unhide the lightbox when it's the target */
+.lightbox:target {
+  display: block;
+}
+
+.lightbox span {
+  /* Full width and height */
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  /* Size and position background image */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* needed to center the images on the slider tiles*/
+.slider a {
+  display:flex;
+}
+
+/*reset lightbox to display none*/
+.slider a.lightbox {
+  display:none;
+}
+
+/*reset lightbox:target  to visible*/
+.slider a.lightbox:target {
+  display:block;
+}
+
+
 /*Styles for extendable content => experimental*/
 
 .collapsible-wrapper {
@@ -386,6 +537,8 @@ label > h2 {
   transition: transform 0.2s ease-out;
 }
 
+
+
 .collapsible-content {
   max-height: 0px;
   overflow: hidden;
@@ -411,9 +564,89 @@ label > h2 {
   transform: rotate(90deg) translateX(-3px);
 }
 
+.toggle .control:before {
+  content:"More..."
+}
+
+.toggle:checked .control:before {
+  content:"Less..."
+}
+
+
 .toggle:checked + .lbl-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
+}
+
+
+/*image slider*/
+.image_slider{
+  height: 20vh;
+  margin-bottom: 1rem;
+}
+
+ul.slider {
+  overflow:auto;
+  list-style: none;
+  height: 22vh;
+  white-space: nowrap;
+  margin-top: 1rem;
+  margin-left: -5vw;
+  display: flex;
+
+}
+
+.slider li {
+  display: inline-flex;
+  height: 20vh;
+  width: 20vh;
+  background-color: #fff3d5 ;
+  border: 1px #9c8d6a solid;
+  flex-shrink: 0;
+  
+  
+}
+
+.slider picture,
+.slider img{
+  text-align: center;
+ 
+  width: auto;
+  max-width: 18vh;
+  height: auto;
+  max-height: 18vh;
+  margin:auto;
+
+}
+.slider .screenshot {
+  padding-left: calc(18vh - 95px);
+}
+
+.slider .slide {
+  padding-left: 7px;
+}
+
+
+.slider:hover::before {
+	content: "Click image to enlarge";
+  font-size: 0.5rem;
+	display: block;
+	position: absolute;
+	background: rgba(240, 248, 255, 0.678);
+	transition: ease-in-out;
+	border: 1px solid blueviolet;
+	border-radius: 10px;
+	padding: 5px;
+	transition-delay: 2s;
+	transition-duration: 2s;
+}
+
+.mobile_only {
+  display:block;
+  font-size: 0.5rem;
+	display: block;
+
+	
 }
 
 /* media queries for larger screens*/
@@ -574,7 +807,7 @@ li.mobileonly {
     padding-top: 0.5vw;
   }
 
- 
+ .mobile_only{display:none;}
 
 }
 
