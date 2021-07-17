@@ -7,96 +7,92 @@
   --gradient-top-color: rgb(131, 200, 218);
   --gradient-bottom-color: rgb(2, 78, 97);
   --contrast-gradient-bottom-color: rgb(191, 191, 191);
-  --font: Junction, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
-    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --highlight-color: #f2dba7;
+  --font-color-body-text: rgb(0, 0, 6);
+  --font: Junction, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   --main-content-left-right-margins: 5vw;
-  --splash-height:280px;
+  --splash-height: 280px;
+  --mobile-menu-color: ;
 }
 
- /*locally hosted Webfonts */
- /* 
+/*locally hosted Webfonts */
+/* 
  ## Ajar-Sans: Source: https://fontlibrary.org/en/font/ajar-sans
  ##Licence: http://www.apache.org/licenses/LICENSE-2.0 
  */
 @font-face {
-	font-family: 'Ajar Sans';
-	font-weight: 700;
-	font-style: normal;
-	src: local('Ajar Sans Bold'), local('../../fonts/AjarSans-Bold'),
-	     url('../../fonts/AjarSans-Bold.woff') format('woff'),
-	     url('../../fonts/AjarSans-Bold.ttf') format('truetype');
+  font-family: "Ajar Sans";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Ajar Sans Bold"), local("../../fonts/AjarSans-Bold"),
+    url("../../fonts/AjarSans-Bold.woff") format("woff"),
+    url("../../fonts/AjarSans-Bold.ttf") format("truetype");
 }
 @font-face {
-	font-family: 'Ajar Sans Extrabold';
-	font-weight: 800;
-	font-style: normal;
-	src: local('Ajar Sans Extrabold'), local('../../fonts/AjarSans-Extrabold'),
-	     url('../../fonts/AjarSans-Extrabold.woff') format('woff'),
-	     url('../../fonts/AjarSans-Extrabold.ttf') format('truetype');
+  font-family: "Ajar Sans Extrabold";
+  font-weight: 800;
+  font-style: normal;
+  src: local("Ajar Sans Extrabold"), local("../../fonts/AjarSans-Extrabold"),
+    url("../../fonts/AjarSans-Extrabold.woff") format("woff"),
+    url("../../fonts/AjarSans-Extrabold.ttf") format("truetype");
 }
 @font-face {
-	font-family: 'Ajar Sans Light';
-	font-weight: 300;
-	font-style: normal;
-	src: local('Ajar Sans Light'), local('../../fonts/AjarSans-Light'),
-	     url('../../fonts/AjarSans-Light.woff') format('woff'),
-	     url('../../fonts/AjarSans-Light.ttf') format('truetype');
+  font-family: "Ajar Sans Light";
+  font-weight: 300;
+  font-style: normal;
+  src: local("Ajar Sans Light"), local("../../fonts/AjarSans-Light"),
+    url("../../fonts/AjarSans-Light.woff") format("woff"),
+    url("../../fonts/AjarSans-Light.ttf") format("truetype");
 }
 @font-face {
-	font-family: 'Ajar Sans';
-	font-weight: 400;
-	font-style: normal;
-	src: local('Ajar Sans'), local('../../fonts/AjarSans-Regular'),
-	     url('../../fonts/AjarSans-Regular.woff') format('woff'),
-	     url('../../fonts/AjarSans-Regular.ttf') format('truetype');
+  font-family: "Ajar Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Ajar Sans"), local("../../fonts/AjarSans-Regular"),
+    url("../../fonts/AjarSans-Regular.woff") format("woff"),
+    url("../../fonts/AjarSans-Regular.ttf") format("truetype");
 }
 @font-face {
-	font-family: 'Ajar Sans Semibold';
-	font-weight: 600;
-	font-style: normal;
-	src: local('Ajar Sans Semibold'), local('fonts/AjarSans-Semibold'),
-	     url('../../fonts/AjarSans-Semibold.ttf') format('woff'),
-	     url('../../fonts/AjarSans-Semibold.ttf') format('truetype');
-}
-
-
-@font-face {
-    font-family: 'Junction Bold';
-    src: url('../../fonts/junction-bold.woff') format('woff'),
-         url('../../fonts/junction-bold.ttf') format('truetype');
-
-    font-weight: bold;
-    font-style: normal;
-
+  font-family: "Ajar Sans Semibold";
+  font-weight: 600;
+  font-style: normal;
+  src: local("Ajar Sans Semibold"), local("fonts/AjarSans-Semibold"),
+    url("../../fonts/AjarSans-Semibold.ttf") format("woff"),
+    url("../../fonts/AjarSans-Semibold.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: 'Junction Light';
-    src: url('../../fonts/junction-light.woff') format('woff'),
-         url('../../fonts/junction-light.ttf') format('truetype');
+  font-family: "Junction Bold";
+  src: url("../../fonts/junction-bold.woff") format("woff"),
+    url("../../fonts/junction-bold.ttf") format("truetype");
 
-    font-weight: normal;
-    font-style: normal;
-
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Junction';
-    src: url('../../fonts/junction-regular.woff') format('woff'),
-         url('../../fonts/junction-regular.ttf') format('truetype');
+  font-family: "Junction Light";
+  src: url("../../fonts/junction-light.woff") format("woff"),
+    url("../../fonts/junction-light.ttf") format("truetype");
 
-    font-weight: normal;
-    font-style: normal;
+  font-weight: normal;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: "Junction";
+  src: url("../../fonts/junction-regular.woff") format("woff"),
+    url("../../fonts/junction-regular.ttf") format("truetype");
+
+  font-weight: normal;
+  font-style: normal;
 }
 /* End locally hosted webfonts*/
 
-
-
-
 html {
   font-size: 12px;
-  font-family: 'Junction';
+  font-family: "Junction";
 }
 /* -- CSS Reset -- */
 * {
@@ -135,11 +131,11 @@ body {
   line-height: 1.5;
   border-style: none;
   color: var(--secondary-color);
-   font-family: 'Junction';
+  font-family: "Junction";
 }
 
 p {
-  color: rgb(0, 0, 6);
+  color: var(--font-color-body-text);
   background-color: rgba(248, 248, 255, 30%);
   padding: 7px 0px 12px 0px;
   border-radius: 5px;
@@ -150,42 +146,39 @@ h1 {
   font-size: 1.5rem;
   font-weight: 400;
   margin-bottom: 1rem;
-  font-family: 'Ajar Sans Semibold';
+  font-family: "Ajar Sans Semibold";
 
   border-bottom: dotted 0.1rem var(--gradient-bottom-color);
 }
-
-
 
 h2 {
   font-size: 1.2rem;
   font-weight: 200;
   letter-spacing: 0.2em;
   margin-top: 0.5rem;
-  font-family: 'Ajar Sans Semibold';
-  color:var(--gradient-bottom-color);
+  font-family: "Ajar Sans Semibold";
+  color: var(--gradient-bottom-color);
 }
 
 h3 {
   font-size: 1.2rem;
   font-weight: 200;
   margin-top: 0.5rem;
-  font-family: 'Ajar Sans Semibold';
+  font-family: "Ajar Sans Semibold";
 }
 
 h4 {
   font-size: 1rem;
   font-weight: 500;
   margin-top: 0.5rem;
-  font-family: 'Ajar Sans Light';
+  font-family: "Ajar Sans Light";
 }
 
 ul {
   padding-left: 1rem;
-  list-style: inside;
+  list-style: outside;
   margin-top: -0.5rem;
 }
-
 
 /*Header and navigation*/
 
@@ -217,7 +210,6 @@ header {
   animation: fadein 2s;
 }
 
-
 nav ul li {
   margin: 0.5em;
 }
@@ -242,15 +234,16 @@ ul.navlist {
   height: 1em;
   width: 1em;
   background-repeat: no-repeat;
-  margin-top: 0.8em;
-  padding-right: 1rem;
+  margin-top: 1rem;
+  padding-right: var(--main-content-left-right-margins);
 
   transition: transform 0.2s ease-out;
 }
 
 .toggle-nav:checked + .lbl-toggle-nav::before {
   background-image: url("../../images/close.svg");
-  padding-left: calc(100vw -1rem);
+  padding-left: 87vw;
+  background-position: right;
 }
 
 .toggle:checked + ul.navlist {
@@ -258,10 +251,15 @@ ul.navlist {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   height: 100vw;
   background-color: var(--gradient-top-color);
   width: 100vw;
   right: 0px;
+}
+/*position mobile menu*/
+.navlist > li:nth-child(1) {
+  margin-top: 3rem;
 }
 
 .toggle-nav:checked + .lbl-toggle-nav + ul.navlist {
@@ -275,6 +273,10 @@ ul.navlist {
   right: 0px;
 }
 
+ul.navlist a {
+  font-size: 1.6rem;
+}
+
 a,
 a:hover {
   text-decoration: none;
@@ -284,8 +286,9 @@ a:hover {
   box-shadow: none;
   -webkit-transition: 0.1s;
   transition: 0.1s;
+  color: var(--gradient-bottom-color);
 }
-a.current {
+nav a.current {
   text-decoration: underline solid var(--secondary-color) 2px;
 }
 
@@ -304,12 +307,14 @@ footer {
   color: var(--contrast-gradient-bottom-color);
   padding-left: var(--main-content-left-right-margins);
   padding-right: var(--main-content-left-right-margins);
+  margin-top: 1rem;
+  padding-top: 1rem;
 }
 
 footer ul li {
   display: inline-block;
   margin: 0.5rem 0.5rem 0.5rem 0;
-  padding-top: 5px;
+
   line-height: 2rem;
 }
 
@@ -319,6 +324,7 @@ footer ul li {
 
 .network ul {
   display: inline-block;
+  margin-top: -0.5rem;
 }
 footer ul {
   right: 0.1em;
@@ -349,10 +355,11 @@ footer ul {
 }
 .footer-navi li a {
   color: rgb(202, 198, 198);
+  font-size: 1rem;
 }
 
 .footer-navi li a:hover {
-  color:var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 /*
@@ -384,18 +391,17 @@ footer ul {
 
   background-repeat: no-repeat;
   position: relative;
- 
 }
 
 .splash h1 {
   color: aliceblue;
   border-bottom: none;
   position: relative;
-  top:calc(var(--splash-height) - 2rem);
-  left:var(--main-content-left-right-margins);
-  font-family: 'Ajar Sans Semibold';
+  top: calc(var(--splash-height) - 2rem);
+  left: var(--main-content-left-right-margins);
+  font-family: "Ajar Sans Semibold";
   font-size: 1.5rem;
-  text-shadow: 1px 1px darkblue ;
+  text-shadow: 1px 1px darkblue;
 }
 /*end splash*/
 
@@ -403,7 +409,8 @@ footer ul {
 
 .bio,
 .moreBio,
-.projectList {
+.projectList,
+.privacy {
   margin-top: 1.3rem;
   font-size: 1rem;
   margin-left: var(--main-content-left-right-margins);
@@ -412,7 +419,8 @@ footer ul {
 
 .bio > p,
 .moreBio > p,
-.projectList p {
+.projectList p,
+.privacy p {
   font-size: 1rem;
 }
 
@@ -420,35 +428,50 @@ footer ul {
   margin-top: 4rem;
 }
 
-.coolButton{
-  
-	width: 80vw;
-	margin-left: var(--main-content-left-right-margins);
-	height: 4rem;
-	background-color:var(--gradient-bottom-color);
-  color:var(--contrast-gradient-bottom-color);
-	margin-bottom: 1rem;
-	border-radius: 10px;
-	font-size: 1.4rem;
-  border:none;
-
+.coolButton {
+  width: 80vw;
+  margin-left: var(--main-content-left-right-margins);
+  height: 3rem;
+  background-color: var(--highlight-color);
+  color: var(--font-color-body-text);
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  border: none;
 }
 
-.coolButton a{
-  color:var(--contrast-gradient-bottom-color);
- 
+.coolButton:hover {
+  background-color: #a78740;
+  color: var(--gradient-bottom-color);
+  transition: ease-in-out 0.2s;
 }
 
-.coolButton a:hover{
-  color:var(--gradient-top-color);
+.coolButton a {
+  color: var(--font-color-body-text);
 }
 
-.coolButton a:visited{
-  color:var(--contrast-gradient-bottom-color);
+.coolButton a:visited {
+  color: inherit;
 }
+
+.privacy {
+  background-color: #e5f7fc;
+  border: solid 1px #b3b2ef;
+  padding: 2px;
+}
+
+.privacy ul {
+  margin-top: 1rem;
+}
+
+.inline {
+  display: inline-block;
+}
+
 /*end normal content 
 
 /* styles for html lightbox by gregory scheer on codepen adapted for use in slider*/
+
 .lightbox {
   /* Default to hidden - is later overwritten by .slider a {display:flex}  */
   display: none;
@@ -460,7 +483,7 @@ footer ul {
   left: 0;
   right: 0;
   bottom: 0;
-  
+
   /* A bit of padding around image */
   padding: 1em;
 
@@ -487,19 +510,18 @@ footer ul {
 
 /* needed to center the images on the slider tiles*/
 .slider a {
-  display:flex;
+  display: flex;
 }
 
 /*reset lightbox to display none*/
 .slider a.lightbox {
-  display:none;
+  display: none;
 }
 
 /*reset lightbox:target  to visible*/
 .slider a.lightbox:target {
-  display:block;
+  display: block;
 }
-
 
 /*Styles for extendable content => experimental*/
 
@@ -509,10 +531,12 @@ footer ul {
 
 input[type="checkbox"] {
   display: none;
+  cursor: pointer;
 }
 
 label > h2 {
   display: inline-block;
+  cursor: pointer;
 }
 
 .lbl-toggle {
@@ -523,7 +547,7 @@ label > h2 {
 }
 
 .lbl-toggle::before {
-  content: " ";
+  content: " > ";
   display: inline-block;
 
   border-top: 5px solid transparent;
@@ -537,8 +561,6 @@ label > h2 {
   transition: transform 0.2s ease-out;
 }
 
-
-
 .collapsible-content {
   max-height: 0px;
   overflow: hidden;
@@ -550,10 +572,13 @@ label > h2 {
 .collapsible-content h3 {
   padding-left: 0.3rem;
   padding-right: 0.3rem;
+  margin-bottom: 0.8rem;
 }
 
 .collapsible-content ul {
   margin-bottom: 0.7rem;
+  padding-left: 1rem;
+  list-style-position: outside;
 }
 
 .toggle:checked + .lbl-toggle + .collapsible-content {
@@ -564,59 +589,45 @@ label > h2 {
   transform: rotate(90deg) translateX(-3px);
 }
 
-.toggle .control:before {
-  content:"More..."
-}
-
-.toggle:checked .control:before {
-  content:"Less..."
-}
-
-
 .toggle:checked + .lbl-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-
 /*image slider*/
-.image_slider{
+.image_slider {
   height: 20vh;
   margin-bottom: 1rem;
 }
 
 ul.slider {
-  overflow:auto;
+  overflow: auto;
   list-style: none;
   height: 22vh;
   white-space: nowrap;
   margin-top: 1rem;
   margin-left: -5vw;
   display: flex;
-
 }
 
 .slider li {
   display: inline-flex;
   height: 20vh;
   width: 20vh;
-  background-color: #fff3d5 ;
+  background-color: #fff3d5;
   border: 1px #9c8d6a solid;
   flex-shrink: 0;
-  
-  
 }
 
 .slider picture,
-.slider img{
+.slider img {
   text-align: center;
- 
+
   width: auto;
   max-width: 18vh;
   height: auto;
   max-height: 18vh;
-  margin:auto;
-
+  margin: auto;
 }
 .slider .screenshot {
   padding-left: calc(18vh - 95px);
@@ -626,33 +637,34 @@ ul.slider {
   padding-left: 7px;
 }
 
-
-.slider:hover::before {
-	content: "Click image to enlarge";
-  font-size: 0.5rem;
-	display: block;
-	position: absolute;
-	background: rgba(240, 248, 255, 0.678);
-	transition: ease-in-out;
-	border: 1px solid blueviolet;
-	border-radius: 10px;
-	padding: 5px;
-	transition-delay: 2s;
-	transition-duration: 2s;
+.slider .manual {
+  padding-left: 24px;
 }
 
-.mobile_only {
-  display:block;
+.slider:hover::before {
+  content: "Click image to enlarge";
   font-size: 0.5rem;
-	display: block;
+  display: block;
+  position: absolute;
+  background: rgba(240, 248, 255, 0.678);
+  transition: ease-in-out;
+  border: 1px solid blueviolet;
+  border-radius: 10px;
+  padding: 5px;
+  transition-delay: 2s;
+  transition-duration: 2s;
+}
 
-	
+.mobile-only {
+  display: block;
+  font-size: 1rem;
+  display: block;
 }
 
 /* media queries for larger screens*/
 @media (min-width: 767px) {
-:root{
-    --main-content-left-right-margins:5vw;
+  :root {
+    --main-content-left-right-margins: 10vw;
   }
 
   html {
@@ -668,147 +680,219 @@ ul.slider {
   }
 
   /*tablet-navigation: still menu button, but higher)*/
-.navmenu{
-  padding:0.5rem;
-}
-.lbl-toggle-nav::before{
-  width: 2rem;
-  height: 2rem;
-  margin-top:0.5rem;
-}
+  .navmenu {
+    padding: 0.5rem;
+    padding-bottom: 1.3rem;
+  }
+  .lbl-toggle-nav::before {
+    width: 2rem;
+    height: 2rem;
+    margin-top: 1rem;
+  }
+
+  .toggle-nav:checked + .lbl-toggle-nav::before {
+    padding-left: 74vw;
+  }
+
+  .projectList {
+    margin-top: 6.5rem;
+  }
 
   .bio,
   .moreBio,
   .projectList {
-   
     font-size: 1rem;
     margin-left: var(--main-content-left-right-margins);
     margin-right: var(--main-content-left-right-margins);
   }
+
+  /* slider adaption */
+  .slider .screenshot {
+    padding-left: calc(18vh - 135px);
+  }
+
+  .image_slider ul {
+    margin-left: -2.5vw;
+  }
+  /*footer adaption */
+  .footer-navi li a {
+    font-size: 1.4rem;
+  }
+  .footer-navi {
+    padding-top: 1.15rem;
+    padding-left: 0;
+  }
+  .footer-navi li {
+    margin-right: 1.5rem;
+  }
+
+  .footer-navi ul {
+    padding-left: 0;
+  }
+  .network ul li a .svg-icon {
+    width: 7vw;
+    height: 7vw;
+  }
 }
 
 @media (min-width: 1200px) {
-  /*bassic styles*/
-  :root{
-    --main-content-left-right-margins:10vw;
-  }
+  /*basic styles*/
+    :root {
+      --main-content-left-right-margins: 10vw;
+    }
 
-  html {
-    font-size: 20px;
-  }
+    html {
+      font-size: 20px;
+    }
 
-  h1 {
-    font-size: 2rem;
-  }
+    h1 {
+      font-size: 2rem;
+    }
 
-  h2 {
-    font-size: 1.6rem;
-  }
-/*navigation laptop*/
+    h2 {
+      font-size: 1.6rem;
+    }
+    /*navigation laptop*/
 
-  header {
-    padding-right: var(--main-content-left-right-margins);
-  }
+    header {
+      padding-right: var(--main-content-left-right-margins);
+    }
 
-li.mobileonly {
-  display:none;
-}
+    li.mobileonly {
+      display: none;
+    }
+    .navlist > li:nth-child(1) {
+      margin-top: 1rem;
+    }
+    .navmenu {
+      height: 5rem;
+      margin-top: 0.5rem;
+    }
 
-  .navmenu {
-    height: 5rem;
-    margin-top: 0.5rem;
-  }
+    nav a {
+      font-size: 1.8rem;
+      padding: 1rem;
+      padding-bottom: 0rem;
+    }
 
-  nav a {
-    font-size: 1.8rem;
-    padding: 1rem;
-    padding-bottom: 0rem;
-  }
+    nav ul li {
+      margin: 1rem 0 1rem 1rem;
+    }
 
-  nav ul li {
-    margin: 1rem 0 1rem 1rem;
-  }
+    ul.navlist {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      height: 4.6rem;
+    }
 
-  ul.navlist {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    height: 4.6rem;
-  }
+    .lbl-toggle-nav,
+    .lbl-toggle-nav:before {
+      display: none;
+    }
 
-  .lbl-toggle-nav,
-  .lbl-toggle-nav:before {
-    display: none;
-  }
+    a,
+    a:hover {
+      text-decoration: none;
+      border: none;
+      border-style: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      color: var(--gradient-bottom-color);
+    }
 
-  a,
-  a:hover {
-    text-decoration: none;
-    border: none;
-    border-style: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    color: var(--gradient-bottom-color);
-  }
+    /*content on laptop*/
 
-  /*content on laptop*/
+    .content {
+      padding-top: calc(var(--main-content-left-right-margins) * 0.5);
+    }
 
-  .content{
-    padding-top: calc(var(--main-content-left-right-margins)*0.5);
-  }
+    .collapsible-content {
+      max-height: 100%;
+    }
 
-  .bio,
-  .moreBio,
-  .projectList {
+    .lbl-toggle::before {
+      display: none;
+    }
+
+    .bio,
+    .moreBio,
+    .projectList {
+      font-size: 1.2rem;
+      margin-left: var(--main-content-left-right-margins);
+      margin-right: var(--main-content-left-right-margins);
+    }
+
+    .bio > p,
+    .moreBio > p,
+    .projectList p {
+      font-size: 1.2rem;
+    }
+
+    /* slider adaption */
+
+    .image_slider {
+      height: 20vw;
+    }
+
+    ul.slider {
+      height: 22vw;
+    }
+    .slider .screenshot {
+      padding-left: calc(19vw - 205px);
+    }
+
+    .image_slider ul {
+      margin-left: 1vw;
+    }
+
+    .image_slider ul li {
+      width: 20vw;
+      height: 20vw;
+    }
+
+    .slider picture,
+    .slider img {
+      max-width: 19vw;
+      max-height: 19vw;
+    }
+    /*footer on laptop*/
+
+    footer {
+      padding-left: var(--main-content-left-right-margins);
+      padding-right: var(--main-content-left-right-margins);
+    }
+
+    .footer-navi {
+      padding-top: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .network {
+      display: inline-block;
+    }
+
+    .network ul {
+      display: flex;
+      align-items: center;
+    }
+
+    .network ul li {
+      display: inline-block;
+    }
+
+    .network ul li a {
+      display: inline-block;
+      width: 5vw;
+      height: 5vw;
+      cursor: pointer;
+      max-width: 60px;
+      max-height: 60px;
+      padding-top: 0.5vw;
+    }
+
+    .mobile-only {
+      display: none;
+    }
    
-    font-size: 1.4rem;
-    margin-left: var(--main-content-left-right-margins);
-    margin-right: var(--main-content-left-right-margins);
-  }
-
-  .bio > p,
-  .moreBio > p,
-  .projectList p {
-    font-size: 1.2rem;
-  }
-  /*footer on laptop*/
-
-  footer {
-    padding-left: var(--main-content-left-right-margins);
-    padding-right: var(--main-content-left-right-margins);
-  }
-
-  .footer-navi {
-    padding-top: 1rem;
-    font-size: 1.3rem;
-  }
-
-  .network {
-    display: inline-block;
-  }
-
-  .network ul {
-    display: flex;
-    align-items: center;
-  }
-
-  .network ul li {
-    display: inline-block;
-   
-  }
-
-  .network ul li a {
-    display: inline-block;
-    width: 5vw;
-    height: 5vw;
-    cursor: pointer;
-    max-width: 60px;
-    max-height: 60px;
-    padding-top: 0.5vw;
-  }
-
- .mobile_only{display:none;}
-
 }
-
-

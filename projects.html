@@ -46,13 +46,27 @@
       </nav>
     </header>
 
+ <!--   <div class="icons">
+      <ul >
+        <li>Design</li>
+        <li>Documentation</li>
+        <li>Coding</li>
+
+      </ul>
+
+    </div>
+    -->
+
     <div class="projectList">
-      <div class="collapsible-wrapper">
-        <input id="collapsible02" class="toggle" type="checkbox" />
+
+      <!--Collapsible project descriptions for mobile-->
+       <div class="collapsible-wrapper">
+       <input id="collapsible02" class="toggle" type="checkbox" />
         <label for="collapsible02" class="lbl-toggle">
-          <h2 id="CoWork" class="flex">Cowork2Go App Concept</h2>
-          <div class="flex">
-            <div class="image_slider">
+      <h2 id="CoWork" class="flex">Cowork2Go App Concept</h2>
+
+      <!--html/css image slider with lightbox -->
+                  <div class="image_slider">
              
               <ul class="slider">
                 <li>
@@ -135,12 +149,15 @@
                 </li>
               </ul>
             </div>
-            <p>
+          <!--End slider 1 -->
+     
+
+              <p>
              Cowork2go allows app users to find and book a coworking space (desk, room or meeting room) at any of the coworking providers in the service. 
             </p>
-          </div>
         </label>
-
+        <!--End alsways visible part of project-->
+        <!--Start extendable part of project - always visible on large screens-->
         <div class="collapsible-content">
           <h3>Original Teamwork Project</h3>
           <div class="flex cloumn">
@@ -152,7 +169,9 @@
             </p>
 
             <p>
-              Result of the work as a team was a presentation (in German) and a
+              Result of the work as a team was a 
+              <a href="assets/CoWork2Go/Präsi-Coworking2Go-final.pdf">
+              presentation (in German)</a> and a
               <a
                 href="https://drive.google.com/file/d/1cKWRK0OkjCxSevtNktwiDMZj92bDT2Aw/view?usp=sharing"
                 target="_blank"
@@ -162,7 +181,7 @@
             </p>
             <h3>App-Abstract</h3>
 
-            <ul class="abstract">
+            <ul >
               <li>Target Group: Individual End Users</li>
               <li>Primary plattform: Mobile Phone</li>
               <li>Main Task: Booking a desk at at Coworking space</li>
@@ -180,15 +199,18 @@
           </div>
         </div>
       </div>
+      <!--end project-->
+
+
       <div class="collapsible-wrapper">
         <input id="collapsible03" class="toggle" type="checkbox" />
         <label for="collapsible03" class="lbl-toggle">
-          <h2 id="madcap">MadCap Flare - Cowork2Go Online help and manual</h2>
+          <h2 id="madcap">Cowork2Go help & manual</h2>
               <div class="image_slider">
       <ul class="slider">
         <li>
           <a href="#img11" id="img11_thumb">
-            <picture class="slide">
+            <picture class="manual">
               <source
                 media="(min-width:650px)"
                 srcset="images/Standalone-Title-h540px.png"
@@ -284,10 +306,10 @@
             As doing actual demo projects is a good way to see how much you really learned about a tool, I used the CoWork2Go project as a test project for MadCap Flare. Cool tool, I like it a lot. 
           </p>
         </label>
-        <p>The demo licence ran out before I finished the project, so there's some Lorem Ipsum still in there.</p>
+
         <div class="collapsible-content">
           <h3>Documentation Abstract</h3>
-          <ul class="abstract">
+          <ul >
             <li>Single Source: Four Outputs from one source</li>
             <li>Two Designs: Standalone App and Company Version</li>
             <li>
@@ -297,25 +319,28 @@
           </ul>        
         </div>
       </div>
-
+      <!--end project-->
       <div class="collapsible-wrapper">
-        <input id="collapsible03" class="toggle" type="checkbox" />
-        <label for="collapsible03" class="lbl-toggle">
-          <h2 id="WIP1">WIP: Semi-Regular Meetings – Group Coordination</h2>
+        <input id="collapsible04" class="toggle" type="checkbox" />
+        <label for="collapsible04" class="lbl-toggle">
+          <h2 id="WIP1">Group Coordination App</h2>
           <p>
-            Did you ever try to plan meetings for a group that meets weekly in theory, but you need at least six persons to actually show up for the meeting making any sense? And you use doodle, or, if you are German, nuudel, and are annoyed with how complicated in is to enter meetings for the next three months? <span>More...</span>
+            Did you ever try to plan meetings for a group that meets weekly in theory, but you need at least six persons to actually show up for the meeting making any sense? And you use doodle, or, if you are German, nuudel, and are annoyed with how complicated in is to enter meetings for the next three months? 
           </p>
         </label>
-        <p>This project is in the research state, a German preliminary survey can be found here: <a class="normal" href=" https://forms.gle/oy1hBt4VbpZ3ERFA9"> https://forms.gle/oy1hBt4VbpZ3ERFA9 </a>(If you follow this link, it goes to google forms. Google’s Privacy Policy applies.</p>
-        <div class="collapsible-content">
+           <div class="collapsible-content">
+        <p>This project is in the research state, a German preliminary survey can be found here: <a class="normal" href=" https://forms.gle/oy1hBt4VbpZ3ERFA9"> https://forms.gle/oy1hBt4VbpZ3ERFA9 </a>(The survey lives on Google Forms. Google’s Privacy Policy applies.)</p>
+     
           <h3>Project Abstract</h3>
-          <ul class="abstract">
+          <ul >
             <li>Target audience: Organizers and participants of groups that meet semi- regulary, in work or recreational contexts </li>
-            <li>Target plattform: tbd - most likely mobile</li>
-            <li>Status: Preliminary Research 
+            <li>Target plattform: tbd - most likely mobile/desktop browser</li>
+            <li>Status: Preliminary Research </li>
           </ul>         
         </div>
       </div>
+            <!--end project-->
+       <!--start nion-collapsible content-->     
        <h2 id="Coding">Coding projects</h2>
           <p>
             This website is done in HTML and CSS only.<br>
@@ -328,6 +353,8 @@
              
             </ul>
     </div>
+
+<!--start footer-->
 
     <footer>
       <ul class="footer-navi">
