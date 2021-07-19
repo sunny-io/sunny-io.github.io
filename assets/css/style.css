@@ -14,6 +14,7 @@
   --main-content-left-right-margins: 5vw;
   --splash-height: 280px;
   --mobile-menu-color: ;
+  --nav-hover-color:rgb(3, 119, 148);
 }
 
 /*locally hosted Webfonts */
@@ -223,9 +224,7 @@ ul.navlist {
   display: block;
   height: 3rem;
 }
-.lbl-toggle-nav:hover {
-  color: #7c5a0b;
-}
+
 
 .lbl-toggle-nav::before {
   content: " ";
@@ -277,8 +276,13 @@ ul.navlist a {
   font-size: 1.6rem;
 }
 
-a,
-a:hover {
+ul.navlist a:hover {
+  color:var(--nav-hover-color);
+  transition: ease-in-out 0.2s;
+}
+
+a
+{
   text-decoration: none;
   border: none;
   border-style: none;
@@ -288,6 +292,12 @@ a:hover {
   transition: 0.1s;
   color: var(--gradient-bottom-color);
 }
+
+a:hover {
+  color:var(--gradient-top-color);
+
+}
+
 nav a.current {
   text-decoration: underline solid var(--secondary-color) 2px;
 }
@@ -400,9 +410,16 @@ footer ul {
   top: calc(var(--splash-height) - 2rem);
   left: var(--main-content-left-right-margins);
   font-family: "Ajar Sans Semibold";
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   text-shadow: 1px 1px darkblue;
 }
+.splash .caption {
+	position: relative;
+	font-size: 10px;
+	top: 230px;
+	margin-left: 45vw;
+}
+
 /*end splash*/
 
 /*normal content*/
@@ -410,7 +427,8 @@ footer ul {
 .bio,
 .moreBio,
 .projectList,
-.privacy {
+.privacy,
+.simpleProject {
   margin-top: 1.3rem;
   font-size: 1rem;
   margin-left: var(--main-content-left-right-margins);
@@ -420,7 +438,8 @@ footer ul {
 .bio > p,
 .moreBio > p,
 .projectList p,
-.privacy p {
+.privacy p,
+.simpleProject p {
   font-size: 1rem;
 }
 
@@ -523,7 +542,7 @@ footer ul {
   display: block;
 }
 
-/*Styles for extendable content => experimental*/
+/*Styles for extendable content*/
 
 .collapsible-wrapper {
   padding-top: 0.5rem;
@@ -542,12 +561,10 @@ label > h2 {
 .lbl-toggle {
   display: block;
 }
-.lbl-toggle:hover {
-  color: #7c5a0b;
-}
+
 
 .lbl-toggle::before {
-  content: " > ";
+  content: "  ";
   display: inline-block;
 
   border-top: 5px solid transparent;
@@ -593,6 +610,24 @@ label > h2 {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
+
+.lbl-toggle span.mobile-only{
+  display:inline;
+  
+}
+.lbl-toggle span.mobile-only::before{
+  content: "More...";
+  color: var(--gradient-bottom-color);
+}
+
+.toggle:checked + .lbl-toggle span.mobile-only::before{
+  content: "Less...";
+  color: var(--gradient-bottom-color);
+}
+
+
+
+
 
 /*image slider*/
 .image_slider {
@@ -655,16 +690,23 @@ ul.slider {
   transition-duration: 2s;
 }
 
+/*content changes depending on device size*/
 .mobile-only {
   display: block;
   font-size: 1rem;
   display: block;
+}
+.desktop-only{
+  display: none;
 }
 
 /* media queries for larger screens*/
 @media (min-width: 767px) {
   :root {
     --main-content-left-right-margins: 10vw;
+    --splash-height: 60vw;
+
+
   }
 
   html {
@@ -693,6 +735,32 @@ ul.slider {
   .toggle-nav:checked + .lbl-toggle-nav::before {
     padding-left: 74vw;
   }
+
+  .splash {
+      width: 90vw;
+      background-image: url(../../images/cat_on_the_prowl_large.jpg);
+
+    }
+
+    .splash h1 {
+
+      position: relative;
+      top: calc(var(--splash-height) - 3.3rem);
+      left: 5px;
+      font-size: 2.5rem;
+
+    }
+
+    .splash .caption{
+      font-size: 14px;
+      top:380px;
+      left:9vw;
+    }
+/*adapt button width*/
+    .coolButton{
+      width: 50vw;
+      margin-left: 15vw;
+    }
 
   .projectList {
     margin-top: 6.5rem;
@@ -738,7 +806,10 @@ ul.slider {
 @media (min-width: 1200px) {
   /*basic styles*/
     :root {
-      --main-content-left-right-margins: 10vw;
+      --main-content-left-right-margins: 15vw;
+      --splash-height: 40vw;
+      --header-margins:3vw;
+
     }
 
     html {
@@ -755,7 +826,7 @@ ul.slider {
     /*navigation laptop*/
 
     header {
-      padding-right: var(--main-content-left-right-margins);
+      padding-right: var(--header-margins);
     }
 
     li.mobileonly {
@@ -765,7 +836,7 @@ ul.slider {
       margin-top: 1rem;
     }
     .navmenu {
-      height: 5rem;
+      height: 4.5rem;
       margin-top: 0.5rem;
     }
 
@@ -791,8 +862,12 @@ ul.slider {
       display: none;
     }
 
-    a,
-    a:hover {
+  ul.navlist a {
+	  font-size: 1.5 rem;
+  }
+
+    a
+     {
       text-decoration: none;
       border: none;
       border-style: none;
@@ -801,26 +876,70 @@ ul.slider {
       color: var(--gradient-bottom-color);
     }
 
-    /*content on laptop*/
-
-    .content {
-      padding-top: calc(var(--main-content-left-right-margins) * 0.5);
+    a:hover {
+      color: var(--gradient-top-color);
     }
+
+    /*content on laptop*/
+    .splash {
+      width: 60vw;
+      background-image: url(../../images/cat_on_the_prowl_large.jpg);
+    }
+
+    .splash .caption {
+      transform: rotate(90deg);
+      top:17rem;
+      left: -12vw;
+      position: relative;
+      width:800px;
+  }
+
+     .coolButton{
+      width: 50vw;
+      margin-left: 10vw;
+    }
+    .content {
+      padding-top: 4.5rem;
+    }
+
+    .column p{
+      column-count: 2;
+    }
+
 
     .collapsible-content {
       max-height: 100%;
+      column-count: 2;
+    }
+   .collapsible-content h3{
+      padding-left: 0;
     }
 
-    .lbl-toggle::before {
+    .collapsible-content ul {
+      padding-left: 1rem;
+    }
+
+    .lbl-toggle::before,
+    .lbl-toggle .mobile-only::before,
+    .toggle:checked + .lbl-toggle .mobile-only::before
+     {
       display: none;
+      content:"";
     }
 
-    .bio,
-    .moreBio,
-    .projectList {
+    
+
+  
+    .moreBio
+    {
       font-size: 1.2rem;
       margin-left: var(--main-content-left-right-margins);
       margin-right: var(--main-content-left-right-margins);
+    }
+    .bio,
+     .projectList {
+      width: 70vw;
+      font-size:1.2rem;
     }
 
     .bio > p,
@@ -829,21 +948,36 @@ ul.slider {
       font-size: 1.2rem;
     }
 
+    
+
+    .privacy{
+      width: 70vw;
+    }
+
+    .simpleProject{
+      column-count: 1;
+    }
+
+   
+
     /* slider adaption */
 
     .image_slider {
       height: 20vw;
+      margin-bottom: 2rem;
+      width: 70vw;
     }
 
     ul.slider {
-      height: 22vw;
+      height: 20vw;
     }
     .slider .screenshot {
       padding-left: calc(19vw - 205px);
     }
 
     .image_slider ul {
-      margin-left: 1vw;
+      margin-left: 0;
+      padding-left: 0;
     }
 
     .image_slider ul li {
@@ -859,8 +993,8 @@ ul.slider {
     /*footer on laptop*/
 
     footer {
-      padding-left: var(--main-content-left-right-margins);
-      padding-right: var(--main-content-left-right-margins);
+      padding-left: var(--header-margins);
+      padding-right: var(--header-margins);
     }
 
     .footer-navi {
@@ -891,8 +1025,16 @@ ul.slider {
       padding-top: 0.5vw;
     }
 
+    /*content changes depending on device-size*/
     .mobile-only {
       display: none;
+    }
+    .desktop-only{
+      display: inline;
+    }
+     hr.desktop-only{
+      border-top: solid 1px var(--gradient-bottom-color);
+      display: block;
     }
    
 }
