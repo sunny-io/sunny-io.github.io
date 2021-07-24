@@ -1,7 +1,13 @@
 
 .DS_Store
+<<<<<<< Updated upstream
 .gitinore
 old.html
 test.html
 ./original files
+=======
+old.html
+test.html
+>>>>>>> Stashed changes
 test_fonts.html
+Github.code-workspace
