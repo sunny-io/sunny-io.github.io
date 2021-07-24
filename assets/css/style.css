@@ -63,6 +63,8 @@
     url("../../fonts/AjarSans-Semibold.ttf") format("truetype");
 }
 
+/*Junction by Caroline Hadilaksono ( http://hadilaksono.com/) & Tyler Finck (http://tylerfinck.com/) Licence: SIL Open Font License, Version 1.1., https://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web */
+
 @font-face {
   font-family: "Junction Bold";
   src: url("../../fonts/junction-bold.woff") format("woff"),
@@ -896,7 +898,7 @@ ul.slider {
     .splash h1 {
       font-size:2.2rem;
     }
-    
+
      .coolButton{
       width: 50vw;
       margin-left: 10vw;
@@ -975,7 +977,11 @@ ul.slider {
       height: 20vw;
     }
     .slider .screenshot {
-      padding-left: calc(19vw - 205px);
+      padding-left: calc(19vw - 93%);
+    }
+
+    .slider .manual{
+      padding-left: 24%;
     }
 
     .image_slider ul {
