@@ -415,10 +415,10 @@ footer ul {
   font-size: 1.4rem;
   text-shadow: 1px 1px darkblue;
 }
-.splash .caption {
+.splashcontainer .caption {
 	position: relative;
 	font-size: 10px;
-	top: 230px;
+	top: 0px;
 	margin-left: 45vw;
 }
 
@@ -753,9 +753,9 @@ ul.slider {
 
     }
 
-    .splash .caption{
+    .splashcontainer .caption{
       font-size: 14px;
-      top:380px;
+      top:0px;
       left:9vw;
     }
 /*adapt button width*/
@@ -888,7 +888,7 @@ ul.slider {
       background-image: url(../../images/cat_on_the_prowl_large.jpg);
     }
 
-    .splash .caption {
+    .splashcontainer .caption {
       transform: rotate(90deg);
       top:17rem;
       left: -16vw;
