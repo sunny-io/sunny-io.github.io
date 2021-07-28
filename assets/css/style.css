@@ -886,6 +886,7 @@ ul.slider {
     .splash {
       width: 60vw;
       background-image: url(../../images/cat_on_the_prowl_large.jpg);
+      margin: auto;
     }
 
     .splashcontainer .caption {
@@ -894,6 +895,7 @@ ul.slider {
       left: -16vw;
       position: relative;
       width:800px;
+
   }
     .splash h1 {
       font-size:2.2rem;
